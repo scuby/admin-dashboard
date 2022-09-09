@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     box-sizing: border-box;
+    font-size: 14px;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
 }
 
 .action button {
-    background-color: rgb(0, 122, 209);
+    background-color: rgb(61, 167, 243);
     width: 90px;
     height: 36px;
     border-radius: 20px;
@@ -40,14 +41,23 @@ body {
 }
 
 #logo {
-    padding-top: 2rem;
+    padding-top: 1rem;
     grid-row-start: 1;
     grid-column-start: 1;
-    background-color: rgb(0, 122, 209);
-    text-indent: 2.5rem;
-    font-size: 1.5rem;
+    background-color: rgb(61, 167, 243);
+    text-indent: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 900;
     color: white;
+    display: grid;
+    grid-template: 50px / 4rem 1fr;
+    justify-content: left;
+    align-items: center;
+}
+
+#logo > span {
+    font-size: 45px;
+    grid-column-start: 1;
 }
 
 #sidebar {
@@ -55,13 +65,31 @@ body {
     grid-row-start: 1;
     margin-top: 6rem;
     display: grid;
+    grid-template-columns: 2rem 1fr;
     align-content: flex-start;
-    line-height: 2.6rem;
-    background-color: rgb(0, 122, 209);
+    line-height: 3rem;
+    background-color: rgb(61, 167, 243);
     color: white;
     font-size: 1.3rem;
     font-weight: bold;
-    text-indent: 2.5rem;
+    /* text-indent: .5rem; */
+}
+
+#sidebar > div,
+#logo > div {
+    display: grid;
+    grid-template: 1fr / 3rem 1fr;
+    grid-column-start: 2;
+}
+
+#sidebar div > span {
+    padding-top: .25em;
+    grid-column-start: 1;
+}
+
+#sidebar div > div,
+#logo > div {
+    grid-column-start: 2;
 }
 
 #sidebar :nth-last-child(3) {
@@ -159,7 +187,7 @@ body {
 }
 
 .announcement {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     border-bottom: .5px solid rgba(128, 128, 128, 0.545);
     padding: 1rem;
     margin: 0 .7rem;
